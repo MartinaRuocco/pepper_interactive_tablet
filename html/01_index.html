@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="/libs/qimessaging/1.0/qimessaging.js"></script>
+	</head>
+
+	<body>
+		<button id="YES" value="YES" onclick="myFunction('YES')"> 
+		YES
+		</button>
+
+		<button id="NO" value="NO" onclick="myFunction('NO')"> 
+		NO
+		</button>
+
+		<p id="testo"> ciao </p>
+
+		<script>
+		console.log("Page started");
+		var session = new QiSession();
+			/* 
+			session.service("ALMemory").done(function (ALMemory) {
+		  		ALMemory.raiseEvent("PepperQiMessaging/fromtablet", "start");
+			});
+			*/
+		
+
+		function myFunction(id) {
+			document.getElementById("testo").innerHTML = document.getElementById(id).value;
+	    	console.log("evento lanciato");
+			session.service("ALMemory").done(function (ALMemory) {
+		  		ALMemory.raiseEvent("PepperQiMessaging/fromtablet", id);
+			});
+
+		}
+		</script>
+	</body>
+</html>

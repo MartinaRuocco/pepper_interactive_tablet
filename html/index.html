@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Pepper Page</title>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<script src="/libs/qimessaging/1.0/qimessaging.js"></script>
+		<script src="./jquery-3.3.1.min.js"></script>
+		<script src="read.js"></script>
+	</head>
+
+	<body style="background:#2b2b2b;">
+		<div align="center">
+				<h1 id="title" class="headline" style="font-size:80px;color:#fe7d79;" >Hello!</h1>
+				<p id="action" class="headline" style="font-size:50px;color:#35a5da;"> </p>
+
+				<button class="btn btn-secondary btn-lg" type="button" id="YES" value="YES" style="height:100px;width:200px;font-size:50px; visibility:hidden;" onclick="myFunction('YES')">
+			   		YES
+			 	</button>
+		  		<!-- button class="btn btn-secondary btn-lg" type="reset" style="height:100px;width:200px;font-size:50px;" onclick="alert('prova')" -->
+			 	<button class="btn btn-secondary btn-lg" type="button" id="NO" value="NO" style="height:100px;width:200px;font-size:50px; visibility:hidden;" onclick="myFunction('NO')">
+			   		NO
+			 	</button>
+		</div>
+
+		<script>
+			//console.log("Page started");
+			var session = new QiSession();
+			session.service("ALMemory").then(function (ALMemory) {
+			    ALMemory.raiseEvent("PepperQiMessaging/fromtablet", "start");
+				});
+
+			//*****************************************************
+			session.service("ALMemory").then(function (ALMemory) {
+			  ALMemory.subscriber("MyApplication/MyData").then(function (subscriber) {
+			    // subscriber.signal is a signal associated to the event
+
+				    subscriber.signal.connect(function(result){
+				    	$("#action").text(result);
+				    	$(".btn").css('visibility', 'visible');
+				    	//document.getElementById("action").innerHTML = result;
+			    	});
+
+				    /*
+				    subscriber.signal.connect(function (state) {
+				      alert(state == 1 ? "new event in input" : "Bye bye!");
+				    });
+				    */
+			  });
+			});
+			//*****************************************************
+
+			function myFunction(id) { 	// function to send 'YES' or 'NO' back to Pepper
+				//document.getElementById("testo").innerHTML = document.getElementById(id).value;
+				session.service("ALMemory").then(function (ALMemory) {
+				    ALMemory.raiseEvent("PepperQiMessaging/fromtablet", id);
+				});
+			}
+		</script>
+
+	</body>
+</html>
