@@ -1,3 +1,6 @@
+This program can be run on Pepper via Choregraphe (©Softbank Robotics Corp.)
+https://www.softbankrobotics.com/emea/en/support/pepper-naoqi-2-9/downloads-softwares
+
 This program shows how to create an *interactive* webapp via the use of Pepper's Tablet. The main components used are the "Show App" box, the "Raise Event"/"Subscribe Event" boxes and the qimessaging library for javascript (see index.html in the html folder).
 
 Description of the Task: 
