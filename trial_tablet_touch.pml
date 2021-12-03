@@ -12,7 +12,7 @@
         <File name="jquery-3.3.1.min" src="html/jquery-3.3.1.min.js" />
         <File name="translation_en_US" src="translations/translation_en_US.ts" />
         <File name="translation_it_IT" src="translations/translation_it_IT.ts" />
-        <File name="README" src="html/README.txt" />
+        <File name="README" src="README.txt" />
     </Resources>
     <Topics />
     <IgnoredPaths />

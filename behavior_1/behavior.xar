@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?><ChoregrapheProject xmlns="http://www.aldebaran-robotics.com/schema/choregraphe/project.xsd" xar_version="3"><Box name="root" id="-1" localization="8" tooltip="Root box of Choregraphe&apos;s behavior. Highest level possible." x="0" y="0"><bitmap>media/images/box/root.png</bitmap><script language="4"><content><![CDATA[]]></content></script><Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" /><Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" /><Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" /><Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" /><Timeline enable="0"><BehaviorLayer name="behavior_layer1"><BehaviorKeyframe name="keyframe1" index="1"><Diagram scale="70.7107"><Box name="Set Language" id="21" localization="8" tooltip="Set the language of your robot for the current application. Your robot will speak and understand the selected language as long as your application has focus. Any following call to ALSpeechRecognition (Speech Reco. box for instance), ALTextToSpeech (Say box for instance) or ALDialog will use this language.&#x0A;" x="66" y="81"><bitmap>media/images/box/interaction/say.png</bitmap><script language="4"><content><![CDATA[class MyClass(GeneratedClass):
+<?xml version="1.0" encoding="UTF-8" ?><ChoregrapheProject xmlns="http://www.aldebaran-robotics.com/schema/choregraphe/project.xsd" xar_version="3"><Box name="root" id="-1" localization="8" tooltip="Root box of Choregraphe&apos;s behavior. Highest level possible." x="0" y="0"><bitmap>media/images/box/root.png</bitmap><script language="4"><content><![CDATA[]]></content></script><Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" /><Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" /><Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" /><Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" /><Timeline enable="0"><BehaviorLayer name="behavior_layer1"><BehaviorKeyframe name="keyframe1" index="1"><Diagram scale="70.7107"><Box name="Set Language" id="21" localization="8" tooltip="Set the language of your robot for the current application. Your robot will speak and understand the selected language as long as your application has focus. Any following call to ALSpeechRecognition (Speech Reco. box for instance), ALTextToSpeech (Say box for instance) or ALDialog will use this language.&#x0A;" x="78" y="102"><bitmap>media/images/box/interaction/say.png</bitmap><script language="4"><content><![CDATA[class MyClass(GeneratedClass):
     def __init__(self):
         GeneratedClass.__init__(self, False)
 
@@ -991,4 +991,62 @@ class MyClass(GeneratedClass):
     def onInput_onStop(self):
         if self.getParameter("Trigger timerOutput if cancelled") and self.waiting and self.waiting.isRunning():
             self.timerOutput()
-        self.onUnload()]]></content></script><Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" /><Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Start the Wait box with the configured timeout value." id="2" /><Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Stop the wait and stimulate the output." id="3" /><Output name="timerOutput" type="1" type_size="1" nature="1" inner="0" tooltip="Send a bang once time set in parameters is elapsed, or if the box is stopped and the appropriate parameter is set." id="4" /><Parameter name="Timeout (s)" inherits_from_parent="0" content_type="2" value="3" default_value="1" min="0" max="5000" tooltip="Duration the box waits before stimulating the output." id="5" /><Parameter name="Trigger timerOutput if cancelled" inherits_from_parent="0" content_type="0" value="0" default_value="1" tooltip="If the box is currently waiting and cancelled, output will be stimulated." id="6" /></Box><Link inputowner="4" indexofinput="2" outputowner="5" indexofoutput="4" /><Link inputowner="1" indexofinput="2" outputowner="10" indexofoutput="4" /><Link inputowner="13" indexofinput="2" outputowner="12" indexofoutput="6" /><Link inputowner="14" indexofinput="2" outputowner="15" indexofoutput="3" /><Link inputowner="16" indexofinput="2" outputowner="7" indexofoutput="3" /><Link inputowner="15" indexofinput="2" outputowner="16" indexofoutput="4" /><Link inputowner="12" indexofinput="2" outputowner="21" indexofoutput="3" /><Link inputowner="7" indexofinput="2" outputowner="21" indexofoutput="3" /><Link inputowner="10" indexofinput="2" outputowner="12" indexofoutput="6" /><Link inputowner="9" indexofinput="2" outputowner="15" indexofoutput="3" /><Link inputowner="3" indexofinput="2" outputowner="10" indexofoutput="4" /><Link inputowner="6" indexofinput="2" outputowner="10" indexofoutput="5" /><Link inputowner="5" indexofinput="2" outputowner="6" indexofoutput="4" /><Link inputowner="5" indexofinput="2" outputowner="11" indexofoutput="8" /><Link inputowner="5" indexofinput="2" outputowner="11" indexofoutput="9" /><Link inputowner="5" indexofinput="2" outputowner="11" indexofoutput="10" /><Link inputowner="8" indexofinput="2" outputowner="6" indexofoutput="4" /><Link inputowner="8" indexofinput="2" outputowner="3" indexofoutput="4" /><Link inputowner="8" indexofinput="2" outputowner="5" indexofoutput="4" /><Link inputowner="8" indexofinput="2" outputowner="9" indexofoutput="4" /><Link inputowner="18" indexofinput="2" outputowner="5" indexofoutput="4" /><Link inputowner="17" indexofinput="2" outputowner="19" indexofoutput="4" /><Link inputowner="19" indexofinput="2" outputowner="1" indexofoutput="3" /><Link inputowner="21" indexofinput="2" outputowner="0" indexofoutput="2" /><Link inputowner="11" indexofinput="2" outputowner="0" indexofoutput="2" /><Link inputowner="0" indexofinput="4" outputowner="4" indexofoutput="3" /></Diagram></BehaviorKeyframe></BehaviorLayer></Timeline></Box></ChoregrapheProject>
+        self.onUnload()]]></content></script><Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" /><Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Start the Wait box with the configured timeout value." id="2" /><Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Stop the wait and stimulate the output." id="3" /><Output name="timerOutput" type="1" type_size="1" nature="1" inner="0" tooltip="Send a bang once time set in parameters is elapsed, or if the box is stopped and the appropriate parameter is set." id="4" /><Parameter name="Timeout (s)" inherits_from_parent="0" content_type="2" value="3" default_value="1" min="0" max="5000" tooltip="Duration the box waits before stimulating the output." id="5" /><Parameter name="Trigger timerOutput if cancelled" inherits_from_parent="0" content_type="0" value="0" default_value="1" tooltip="If the box is currently waiting and cancelled, output will be stimulated." id="6" /></Box><Box name="Server" id="22" localization="8" tooltip="This box contains a basic python script and can be used to create any python script box you would like.&#x0A;&#x0A;To edit its script, double-click on it." x="226" y="571"><bitmap>media/images/box/box-python-script.png</bitmap><script language="4"><content><![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+
+    def onLoad(self):
+        #put initialization code here
+        pass
+
+    def onUnload(self):
+        #put clean-up code here
+        pass
+
+    def onInput_onStart(self):
+
+        import socket
+        robotip = "localhost"
+        # create a socket object
+        s = socket.socket()
+        self.logger.info("Socket successfully created at "+str(robotip))
+
+        # reserve a port on your computer
+        port = 49155
+        s.bind((robotip, port))
+        self.logger.info("socket binded to %s" %(port))
+
+        # put the socket into listening mode
+        s.listen(5)
+        self.logger.info("socket is listening")
+
+
+        # a forever loop until we interrupt it or an error occurs
+        while True:
+            c = None
+            try:
+                c, addr = s.accept()
+                # Establish connection with client.
+#                self.logger.info ('Got connection from', str(addr))
+                self.logger.info ('Got connection from: ')
+                self.logger.info (str(addr))
+                data = c.recv(1024)
+                if data:
+                    self.logger.info(data) #data is a str
+                    #self.onStopped(data) #activate the output of the box
+                c.close()
+                self.logger.info("connection closed")
+
+            except KeyboardInterrupt:
+                # Close the connection with the client
+                if c:
+                    c.close()
+                    self.logger.info("connection closed")
+                # s.shutdown(s.SHUT_RDWR)
+                s.close()
+                break
+
+
+    def onInput_onStop(self):
+        self.onUnload() #it is recommended to reuse the clean-up as the box is stopped
+        self.onStopped() #activate the output of the box]]></content></script><Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" /><Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" /><Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" /><Output name="onStopped" type="0" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" /></Box><Link inputowner="4" indexofinput="2" outputowner="5" indexofoutput="4" /><Link inputowner="1" indexofinput="2" outputowner="10" indexofoutput="4" /><Link inputowner="13" indexofinput="2" outputowner="12" indexofoutput="6" /><Link inputowner="14" indexofinput="2" outputowner="15" indexofoutput="3" /><Link inputowner="16" indexofinput="2" outputowner="7" indexofoutput="3" /><Link inputowner="15" indexofinput="2" outputowner="16" indexofoutput="4" /><Link inputowner="12" indexofinput="2" outputowner="21" indexofoutput="3" /><Link inputowner="7" indexofinput="2" outputowner="21" indexofoutput="3" /><Link inputowner="10" indexofinput="2" outputowner="12" indexofoutput="6" /><Link inputowner="9" indexofinput="2" outputowner="15" indexofoutput="3" /><Link inputowner="3" indexofinput="2" outputowner="10" indexofoutput="4" /><Link inputowner="6" indexofinput="2" outputowner="10" indexofoutput="5" /><Link inputowner="5" indexofinput="2" outputowner="6" indexofoutput="4" /><Link inputowner="5" indexofinput="2" outputowner="11" indexofoutput="8" /><Link inputowner="5" indexofinput="2" outputowner="11" indexofoutput="9" /><Link inputowner="5" indexofinput="2" outputowner="11" indexofoutput="10" /><Link inputowner="8" indexofinput="2" outputowner="6" indexofoutput="4" /><Link inputowner="8" indexofinput="2" outputowner="3" indexofoutput="4" /><Link inputowner="8" indexofinput="2" outputowner="5" indexofoutput="4" /><Link inputowner="8" indexofinput="2" outputowner="9" indexofoutput="4" /><Link inputowner="18" indexofinput="2" outputowner="5" indexofoutput="4" /><Link inputowner="17" indexofinput="2" outputowner="19" indexofoutput="4" /><Link inputowner="19" indexofinput="2" outputowner="1" indexofoutput="3" /><Link inputowner="21" indexofinput="2" outputowner="0" indexofoutput="2" /><Link inputowner="11" indexofinput="2" outputowner="0" indexofoutput="2" /><Link inputowner="0" indexofinput="4" outputowner="4" indexofoutput="3" /><Link inputowner="22" indexofinput="2" outputowner="0" indexofoutput="2" /></Diagram></BehaviorKeyframe></BehaviorLayer></Timeline></Box></ChoregrapheProject>
